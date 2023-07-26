@@ -25,7 +25,6 @@ router.post('/adduser', async (req, res) => {
         
     });
     
-    
     var Mobilenumber = req.body.Mobilenumber;
     //first check if user is alredy existed 
     User.findOne({ Name: req.body.Name }).select().exec().then(doc => {
